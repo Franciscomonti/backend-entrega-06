@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Websocket entrega 06</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+  <h1>Websocket</h1>
+
+<!-- modulo de productos -->
+
+<div>
+  <form onsubmit="return addproductos(this)">
+    <input type="text" id="nombreProducto" name="nombreProducto" placeholder="nombre">
+    <input type="text" id="precioProducto" name="precioProducto" placeholder="precio">
+    <input type="text" id="imagenProducto" name="imagenProducto" placeholder="url de imagen">
+    <button>Enviar</button>
+  </form>
+
+  <table>
+    <thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Foto</th>
+			</tr>
+		</thead>
+    <tbody id="listaProducto"></tbody>
+  </table>
+</div>
+
+  <!-- Chat de la plataforma  -->
+<div>
+  <form onsubmit="return addMessage(this)">
+    <input type="email" id="nombre" name="nombre" placeholder="ingresa tu email" important>
+    <input type="text" id="mensaje" name="mensaje" placeholder="escribe tu mensaje">
+    <button>Enviar</button>
+  </form>
+
+  <div id="chat"></div>
+</div>
+  <script src="js/main.js"></script>
+</body>
+</html>
